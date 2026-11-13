@@ -1,0 +1,40 @@
+{
+  "id": "live-amount-input-test-form",
+  "fieldType": "form",
+  "title": "live-amount-input e2e test",
+  "action": "/adobe/forms/af/submit/live-amount-input-test-form",
+  "properties": {},
+  "items": [
+    {
+      "id": "field-under-test",
+      "name": "fieldUnderTest",
+      "fieldType": "number-input",
+      ":type": "live-amount-input",
+      "visible": true,
+      "enabled": true,
+      "label": {
+        "value": "Amount",
+        "visible": true
+      },
+      "properties": {
+        "title": "live-amount-input",
+        "subtitle": "Amount input with live amount-in-words update",
+        "wordsLabel": "Amount (in words)",
+        "readOnlyLabel": "Read-only"
+      },
+      "type": "number",
+      "default": 12345.67,
+      "required": true,
+      "minimum": 0,
+      "maximum": 999999999.99
+    },
+    {
+      "id": "next-field",
+      "name": "nextField",
+      "fieldType": "text-input",
+      "label": {
+        "value": "Next field"
+      }
+    }
+  ]
+}

@@ -685,6 +685,25 @@
               }
             }
           }
+        },
+        {
+          "title": "Live Amount Input",
+          "id": "live-amount-input",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+                "template": {
+                  "jcr:title": "Live Amount Input",
+                  "fieldType": "number-input",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 999999999.99,
+                  "fd:viewType": "live-amount-input"
+                }
+              }
+            }
+          }
         }
       ]
     }

@@ -45,6 +45,7 @@ blocks/form/
 ├── components/                       — Custom component decorators
 │   ├── accordion/
 │   ├── file/
+│   ├── live-amount-input/             — Rupee input with live amount-in-words output
 │   ├── modal/
 │   ├── password/
 │   ├── rating/

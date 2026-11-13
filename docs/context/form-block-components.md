@@ -84,7 +84,7 @@ All 11 registered field renderers:
 **mappings.js overview:**
 
 - **OOTBComponentDecorators**: accordion, file, modal, password, rating, repeat, tnc, toggleable-link, wizard
-- **customComponents** (default: ['range'])
+- **customComponents** (default: ['range', 'live-amount-input'])
 - **loadComponent**:
   - Status tracking via dataset.componentStatus (loading/loaded)
   - CSS load from components directory
@@ -171,3 +171,17 @@ export default async function(element, fd, container, formId) {
    - Contains the field's DOM structure
    - Has dataset.id matching the field ID
    - Access fd parameter for field definition
+
+## Section 10: Live Amount Input
+
+`live-amount-input` enhances a `number-input` with a rupee prefix, clear button,
+and accessible, read-only Indian currency words. Its `input` listener updates
+the words without committing the model; native change/blur commits a numeric
+value once, and clear commits `null` immediately. It owns grouped text display
+and intercepts native change so the generic form listener does not write
+comma-formatted text into the numeric model. Invalid edits show inline validation
+errors and do not overwrite the last committed value. Standard subscriptions
+keep the input, output, and clear-button state synchronized with model changes.
+
+See [the component documentation](../../blocks/form/components/live-amount-input/README.md)
+for authoring properties and supported amounts.

@@ -1,0 +1,84 @@
+{
+  "definitions": [
+    {
+      "title": "Live Amount Input",
+      "id": "live-amount-input",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
+            "template": {
+              "jcr:title": "Live Amount Input",
+              "fieldType": "number-input",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 999999999.99,
+              "fd:viewType": "live-amount-input"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "live-amount-input",
+      "fields": [
+        {
+          "component": "tab",
+          "label": "Basic",
+          "name": "basic"
+        },
+        {
+          "...": "../../models/form-common/_basic-input-placeholder-fields.json#/fields"
+        },
+        {
+          "component": "number",
+          "name": "default",
+          "label": "Default Value",
+          "valueType": "number",
+          "valueFormat": "double"
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Component Title",
+          "valueType": "string",
+          "value": "live-amount-input"
+        },
+        {
+          "component": "text",
+          "name": "subtitle",
+          "label": "Component Subtitle",
+          "valueType": "string",
+          "value": "Amount input with live amount-in-words update"
+        },
+        {
+          "component": "text",
+          "name": "wordsLabel",
+          "label": "Amount in Words Label",
+          "valueType": "string",
+          "value": "Amount (in words)"
+        },
+        {
+          "component": "text",
+          "name": "readOnlyLabel",
+          "label": "Read-only Note",
+          "valueType": "string",
+          "value": "Read-only"
+        },
+        {
+          "component": "tab",
+          "label": "Validation",
+          "name": "validation"
+        },
+        {
+          "...": "../../models/form-common/_number-validation-fields.json#/fields"
+        },
+        {
+          "...": "../../models/form-common/_help-container.json#/fields"
+        }
+      ]
+    }
+  ]
+}

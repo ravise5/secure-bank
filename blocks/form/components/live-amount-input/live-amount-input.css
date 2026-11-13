@@ -1,0 +1,154 @@
+main .form .field-wrapper.live-amount-input {
+    grid-column: 1 / -1;
+    min-width: 0;
+    padding: clamp(20px, 3vw, 44px);
+    font-family: Arial, sans-serif;
+    color: #0b1020;
+    background: #fcfcff;
+    border: 1px solid #e6e9f1;
+    border-radius: 28px;
+    box-shadow: 0 8px 22px rgb(15 23 42 / 8%);
+}
+
+main .form .live-amount-input-title {
+    margin: 0 0 10px;
+    font-size: clamp(26px, 3vw, 40px);
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+main .form .live-amount-input-subtitle {
+    margin: 0 0 40px;
+    color: #565d6d;
+    font-size: clamp(16px, 2vw, 24px);
+    line-height: 1.4;
+}
+
+main .form .live-amount-input > .field-label,
+main .form .live-amount-input-words-label {
+    display: block;
+    margin: 0 0 14px;
+    color: inherit;
+    font-size: clamp(18px, 2vw, 26px);
+    font-weight: 700;
+}
+
+main .form .live-amount-input-entry {
+    display: flex;
+    align-items: stretch;
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid #d7dce6;
+    border-radius: 12px;
+}
+
+main .form .live-amount-input-entry:focus-within {
+    border-color: #1465ff;
+    box-shadow: 0 0 0 1px #1465ff;
+}
+
+main .form .live-amount-input.field-invalid .live-amount-input-entry {
+    border-color: var(--form-error-color);
+}
+
+main .form .live-amount-input-prefix {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: #565d6d;
+    background: #eef0f5;
+    border-right: 2px solid #dce0e8;
+    font-size: clamp(24px, 3vw, 36px);
+}
+
+main .form .live-amount-input-control {
+    flex: 1;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+    padding: 16px;
+    color: inherit;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.4;
+}
+
+main .form .live-amount-input-clear {
+    align-self: center;
+    flex: none;
+    width: 28px;
+    height: 28px;
+    margin: 0 24px 0 8px;
+    padding: 0;
+    color: #fff;
+    background: #a5a5a5;
+    border: 0;
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+main .form .live-amount-input-clear[hidden] {
+    display: none;
+}
+
+main .form .live-amount-input-clear:focus-visible {
+    outline: 2px solid #1465ff;
+    outline-offset: 4px;
+}
+
+main .form .live-amount-input-clear:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+main .form .live-amount-input-words-label {
+    margin-top: 32px;
+}
+
+main .form .live-amount-input-words {
+    min-height: 64px;
+    padding: 16px 20px;
+    color: inherit;
+    background: #eef0f5;
+    border: 2px solid #dce0e8;
+    border-radius: 12px;
+    font-size: clamp(16px, 2vw, 26px);
+    font-weight: 400;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+main .form .live-amount-input-readonly {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 0;
+    color: #656c7c;
+    font-size: 18px;
+}
+
+main .form .live-amount-input-readonly::before {
+    content: "";
+    width: 18px;
+    height: 22px;
+    background: currentcolor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 28'%3E%3Crect x='3' y='12' width='18' height='14' rx='2' fill='none' stroke='black' stroke-width='3'/%3E%3Cpath d='M7 12V7a5 5 0 0110 0v5' fill='none' stroke='black' stroke-width='3'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+@media (width <= 600px) {
+    main .form .live-amount-input-prefix {
+        padding: 12px 16px;
+    }
+
+    main .form .live-amount-input-clear {
+        margin-right: 12px;
+    }
+}
